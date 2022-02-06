@@ -1,5 +1,5 @@
 ---
-# handlers file for docker
+# handlers file for jenkins
   - name: Restart {{jenkins_container_name}} container
     systemd:
       state: restarted

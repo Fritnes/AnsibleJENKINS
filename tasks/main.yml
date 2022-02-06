@@ -1,5 +1,5 @@
 ---
-# tasks file for wiki.js
+# tasks file for jenkins
   - name: Create directorys
     file:
       path: "{{item }}"
