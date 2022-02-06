@@ -1,0 +1,4 @@
+---
+# defaults file for wiki.js
+version: "3.7"
+jenkins_container_name: jenkins
