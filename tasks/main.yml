@@ -20,6 +20,12 @@
       dest: "{{docker_folder}}/{{jenkins_container_name}}/Dockerfile"
     notify: Restart {{jenkins_container_name}} container
 
+  - name: Update contaider
+    shell: "docker-compose pull"
+    args:
+      chdir: "{{docker_folder}}/{{jenkins_container_name}}"
+    changed_when: "'... pull complete' in result.stderr | default('')"
+
   - name: Generate init
     template:
       src: "docker_compose_service.j2"
